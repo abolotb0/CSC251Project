@@ -60,4 +60,16 @@ public class PolicyHolder
       if (height <= 0) return 0.0;
       return (weight * 703) / (height * height);
    }
+
+   @Override
+   public String toString()
+{
+    return "Policyholder's First Name: " + firstName + "\n"
+         + "Policyholder's Last Name: " + lastName + "\n"
+         + "Policyholder's Age: " + age + "\n"
+         + "Policyholder's Smoking Status (Y/N): " + smokingStatus + "\n"
+         + "Policyholder's Height: " + String.format("%.1f", height) + " inches\n"
+         + "Policyholder's Weight: " + String.format("%.1f", weight) + " pounds\n"
+         + "Policyholder's BMI: " + String.format("%.2f", calculateBMI());
+   }
 }
